@@ -1,0 +1,191 @@
+.button {
+  --color: #ffffff;
+  /* padding: 0.8em 1.7em;*/
+  margin: 0.5rem; /* Espacio entre botones */
+  padding: 10px 15px;
+  background-color: transparent;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid #666;
+  color: var(--color);
+  z-index: 2;
+ 
+
+}
+
+.button::before,
+.button::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+.button::before {
+  top: -1em;
+  left: -1em;
+}
+
+.button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+.button:hover::before,
+.button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+.button:hover {
+  color: #FFFFFF;
+}
+
+.button:active {
+  filter: brightness(0.8);
+}
+
+.button-container {
+  display: flex; /* Enable flexbox for button and description */
+  flex-direction: column; /* Stack button and description */
+  /*align-items: flex-start; /* Align text and description to the left */
+  justify-content: space-between;
+  margin-bottom: 10px; /* Add margin between button containers */
+}
+
+.button-description {
+  /* Adjust font size as needed */
+  color: gray; /* Set description text color */
+  margin-left: 0.9rem;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  /* margin: 0.7rem; */
+}
+
+.button:hover .icon path {
+  stroke: black; /* Cambiar el color del trazo a negro al pasar el cursor sobre el botón */
+}
+
+hr {
+  border: 1px dashed;
+  margin: 1rem 0;
+  border-color: #999999;
+  left: 1038px;
+  top: 478px;
+  width: 100%;
+}
+
+.card-buttons {
+  /* Contenedor para los botones */
+  display: flex; /* Contenedor flexbox para los botones */
+  flex-direction: row;
+  justify-content: space-between; /* Alinear verticalmente los elementos */
+}
+
+.card {
+  max-width: 394px;
+  max-height: 520px;
+  left: 107px;
+  top: 327px;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #2d2d2d;
+  padding: 1rem;
+  box-shadow: 0px 0px 25px #2d2d2d;
+}
+
+.metodos {
+  width: 127px;
+  height: 20px;
+  top: 619px;
+  left: 1035px;
+  color: #999999;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  line-height: 20px;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 1px;
+}
+
+
+.price {
+  font-size: 35px;
+  line-height: 20px;
+  font-weight: 500;
+  margin-top: 1rem;
+  letter-spacing: 0.1px;
+  
+  color: #ffffff;
+}
+
+.lists {
+  max-width: 335px;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 0.9rem;
+  row-gap: 0.9rem;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 500;
+  letter-spacing: 0.1px;
+  color: rgba(255, 255, 255, 1);
+  margin: 0px;
+
+  flex: 1; /* Permite que el contenido ocupe el espacio restante */
+  padding: 15px;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.action {
+  margin-top: 2rem;
+  flex: 0 0 auto;
+  border: 2px solid rgba(255, 255, 255, 1);
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.625rem 1.5rem;
+  text-align: center;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #000000;
+  font-weight: 500;
+
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.action:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+}
+
+span {
+  font-family: inter;
+  font-size: 15px;
+  
+}
